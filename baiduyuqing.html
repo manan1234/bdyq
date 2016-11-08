@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+<title>百度舆情</title>
+<link rel="stylesheet" href="css/jquery.fullPage.css">
+<link rel="stylesheet" href="css/yuqing.css">
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/jquery.fullPage.min.js"></script>
+<style>
+/*.section1 { background: url(images/bj.jpg) 50%;}
+.section2 { background: url(images/2.jpg) 50%;}
+.section3 { background: url(images/3.jpg) 50%;}
+.section4 { background: url(images/4.jpg) 50%;}*/
+</style>
+<script>
+	$(function(){
+	$('#dowebok').fullpage({
+		navigation:true,
+		navigationTooltips:["登录百度舆情","领先：数据手机与处理","全面：舆情分析逻辑与架构","专业：专业数据可视化"],
+		afterLoad:function(anchorLink,index){
+			console.log(index)
+			if (index==1) {
+				$(".ship").addClass("shipd");
+			}
+			// if (index==2) {
+			// 	$(".title").removeAttr("id");
+			// 	$(".title").eq(0).attr("id","xyd");
+			// }
+			$(".title").removeAttr("id");
+			$(".title").eq(index-2).attr("id","xyd");
+			$(".r-icon").removeAttr("id");
+			$(".r-icon").eq(index-2).attr("id","ryd");
+			$(".bigzi").removeAttr("id");
+			$(".bigzi").eq(index-2).attr("id","rotate");
+		}
+
+	})
+	$(".xl").click(function(){
+				$.fn.fullpage.moveSectionDown();
+	})
+});
+</script>
+</head>
+<body>
+<div id="top">
+    	<div class="toubu">
+    		<a href="javascript:;" class="baidu-logo"></a>
+    		<div class="sange">
+    			<ul>
+    				<li><a href="javascript:;">首页</a></li>
+    				<li><a href="javascript:;">产品介绍</a></li>
+    				<li><a href="javascript:;">用户版</a></li>
+    			</ul>
+    		</div>
+    		<div class="help">
+    			<a href="javascript:;" class="kehuduan">手机客户端<i></i></a>
+    			<a href="javascript:;">手机司南</a>
+    			<a href="javascript:;">联系我们</a>
+    			<a href="javascript:;">申请试用</a>
+    		</div>
+    	</div>
+</div>
+<div id="dowebok">
+	<div class="section section1">
+       <div class="yun1"></div>
+       <div class="yun2"></div>
+       <div class="yun3"></div>
+       <div class="word"></div>
+       <div class="flight"></div>
+       <div class="lsj"></div>
+       <div class="rsj"></div>
+       <div class="msj"></div>
+       <div class="ship"></div>
+       <div class="sea"></div>
+       <form class="login">
+		  	<div class="login-inner">
+		  		<h2>登录</h2>
+		  		<div class="yonghumin">
+		  			<span></span>
+		  			<input type="text" value="用户名"> 
+		  		</div>
+		  		<p class="error"></p>
+		  		<div class="mima">
+		  			<span></span>
+		  			<div class="mi">
+		  				<input type="text" value="密码">
+		  			</div>
+		  		</div>
+		  		<p class="error"></p>
+		  		<div class="yanzheng">
+		  			<input type="text" value="验证码">
+		  			<img src="images/cas.baidu.com.jpg" alt="">
+		  			<a href="javscript:;">换一张</a>
+		  		</div>
+		  		<p class="error"></p>
+		  	</div>
+		  	<div class="denglu-action">
+		  		<input type="submit" value="登录">
+		  		<div class="other">
+		  			<div class="fl">
+		  				<span></span>
+		  				<a href="javscript:;">安全控件常见问题</a>
+		  			</div>
+		  			<div class="fr"><a href="javascript:;">忘记密码</a></div>
+		  		</div>
+		  	</div>
+		  </form>
+       <div class="xl"></div>
+	</div>
+	<div class="section section2">
+		<div class="title">
+			<div class="bigzi"></div>
+			<div class="text">
+				<div class="h4">数据收集与处理</div>
+				<div class="p">15年专业数据收集与语义分析技术积累<br>卓越极致，不断攀登</div>
+			</div>
+		</div>
+		<div class="r-icon"></div>
+		<div class="gt1"></div>
+		<div class="gt2"></div>
+		<div class="gt3"></div>
+		<div class="gt4"></div>
+		<div class="gt5"></div>
+		<div class="xl"></div>
+	</div>
+	<div class="section section3">
+		<div class="title">
+			<div class="bigzi"></div>
+			<div class="text">
+				<div class="h4">舆情分析逻辑与架构</div>
+				<div class="p">声量诊断、传播分析、情感提炼、受众画像
+				<br>有方法论，更有智慧</div>
+			</div>
+		</div>
+		<div class="r-icon"></div>
+		<div class="xl"></div>
+		<div class="xgd1"></div>
+		<div class="xgd2"></div>
+		<div class="xgd3"></div>
+		<div class="xgd4"></div>
+		<div class="xgd5"></div>
+		<div class="xgd6"></div>
+		<div class="footer"></div>
+	</div>
+	<div class="section section4">
+		<div class="title">
+			<div class="bigzi"></div>
+			<div class="text">
+				<div class="h4">专业数据可视化</div>
+				<div class="p">非凡的数据洞悉和可视化能力<br>精研数据，惊艳所见</div>
+			</div>
+		</div>
+		<div class="r-icon"></div>
+		<div class="circle"></div>
+	</div>
+</div>
+</body>
+</html>
